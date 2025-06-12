@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            justify-content: center;
+            font-family: cursive;
+            background-color: rgb(128, 128, 219);
+        }
+        h2{
+            color:white;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+        .year{
+            font-size: 30px;
+            color:white;
+            font-weight: bold;
+        }
+        .coundown{
+            margin:30px;
+            background-color: rgb(199, 199, 109);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height:120px;
+            width:100%;
+            color:rgb(167, 56, 56);
+            position: relative;
+        }
+        .coundown div{
+            margin:0 15px;
+            font-size:2.5rem;
+            font-weight: 500;
+            margin-top: -25px;
+            position: relative;
+            text-align: center;
+            width:100px;
+
+        }
+        .coundown div::before{
+
+            position:absolute;
+            bottom:-30px;
+            left:0;
+            font-size:.35em;
+            line-height: 40px;
+            text-transform: uppercase;
+            gap:4px;
+            letter-spacing: 1px ;
+            font-weight: 500;
+            width:100%;
+            height:35px;
+           
+           
+
+        }
+        .coundown #day::before{
+            content:"Days";
+        }
+        .coundown #hour::before{
+            content:"Hours";
+        }
+
+        .coundown #minute::before{
+            content:"Minutes";
+        }
+        .coundown #second::before{
+            content:"Seconds";
+        }
+    </style>
+</head>
+<body>
+    <h2>Coundown to New Year</h2>
+    <div class="year">2027</div>
+    <div class="coundown">
+        <div id="day">00</div>
+        <div id="hour">00</div>
+        <div id="minute">00</div>
+        <div id="second">00</div>
+    </div>
+    <script src="coundown.js"></script>
+</body>
+</html>
